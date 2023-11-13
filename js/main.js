@@ -25,8 +25,13 @@ class SuperMath {
           alert('Result: ' + (x - y));
           break;
         case '%':
-          alert('Result: ' + (x % y));
-          break;
+          if(y !== 0) {
+            alert('Result: ' + (x % y));
+            break;
+          } else {
+            alert('Its not allowed devide by zero');
+            break;
+          } 
       }
     } else {
       this.input();
@@ -90,3 +95,12 @@ class SuperMath {
       }
   }
 }
+
+const obj = {
+  X: 6,
+  Y: 0,
+  znak: '%',
+}
+
+const p = new SuperMath();
+p.check(obj);
